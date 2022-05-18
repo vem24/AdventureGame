@@ -9,14 +9,12 @@ print_pause("You find yourself standing in an open field, filled with grass and 
 print_pause("Rumor has it that a wicked fairie is somewhere around here, and has been terrifying the nearby village.")
 print_pause("...")
 
-choice = input("""Enter 1 to knock on the door of the house.
+choice = int(input("""Enter 1 to knock on the door of the house.
 Enter 2 to peer into the cave.
 What would you like to do?
-(Please enter 1 or 2)\n""")
+(Please enter 1 or 2)\n"""))
 
 while True:
-  if choice != 1 or choice !=2:
-    print_pause("Please enter 1 or 2")
 
   if choice == 1:
     print_pause("You approach the door and knock.")
@@ -25,11 +23,11 @@ while True:
     print_pause("Then...")
     print_pause("your heart sinks to your stomach of fear when you see a troll with sharp teeth sprinting towards you!")
     print_pause("You look around and see that you kept that stake knife from the dinner you visited earlier.")
-    survive = input("""Enter 1 to confront the troll with the stake knife.
+    survive = int(input("""Enter 1 to confront the troll with the stake knife.
     Enter 2 to run for your life.
     What would you like to do?
-    (Please enter 1 or 2)\n""")
-  elif choice == 2:
+    (Please enter 1 or 2)\n"""))
+  if choice == 2:
     print_pause("You walk towards the cave and stop right before you enter.")
     print_pause("Slowly, you pick up your feet and continue your way in quiently.")
     print_pause("17 steps in you see something that caught your eye.")
@@ -37,7 +35,9 @@ while True:
     print_pause("With the very little light coming into the cave you manage to read the engraved name.")
     print_pause("'Who is Godric Gryffindor?' You wonder.")
     print_pause("You hear something coming from deeper inside the cave.")
-    survive2 = input("""Enter 1 to continue down the cave.
+    survive2 = int(input("""Enter 1 to continue down the cave.
     Enter 2 to exit the cave.
     What would you like to do?
-    (Please enter 1 or 2)\n""")
+    (Please enter 1 or 2)\n"""))
+  else:
+    choice = int(input("(Please enter 1 or 2)\n"))
